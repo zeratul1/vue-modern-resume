@@ -27,12 +27,15 @@
                 <v-flex
                   md8
                 >
-                  <content-container class="fill-height" />
+                  <content-container
+                    ref="content"
+                    class="fill-height"
+                  />
                 </v-flex>
               </v-layout>
               <v-layout>
                 <v-flex md12>
-                  <timeline-primary />
+                  <timeline-primary ref="timeline" />
                   <timeline-endless />
                 </v-flex>
               </v-layout>
@@ -45,11 +48,11 @@
 </template>
 
 <script>
+import LeaderLine from 'leader-line'
 import SidebarContainer from '@/views/dark-template/sidebar/Container'
 import ContentContainer from '@/views/dark-template/content/Container'
 import TimelinePrimary from '@/views/dark-template/timeline/Primary'
 import TimelineEndless from '@/views/dark-template/timeline/Endless'
-import LeaderLine from 'leader-line'
 import GithubRibbon from '@/views/dark-template/GithubRibbon'
 
 export default {
@@ -62,15 +65,16 @@ export default {
     SidebarContainer,
   },
   mounted () {
+    const { content, timeline } = this.$refs
     // eslint-disable-next-line no-unused-vars
     const line = new LeaderLine(
-      document.getElementById('to-timeline'),
-      document.getElementById('timeline'),
+      content.$refs['to-timeline'].$el,
+      timeline.$refs['timeline'].$el,
       {
         size      : 2,
-        color     : this.$vuetify.theme.primary,
-        startLabel: LeaderLine.captionLabel('To the Journey ...'),
-      }
+        color     : this.$vuetify.theme.currentTheme.primary,
+        startLabel: LeaderLine.captionLabel('看看这货都干过些啥……'),
+      },
     )
   },
 }

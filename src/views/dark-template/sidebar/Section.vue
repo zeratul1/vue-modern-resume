@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-4">
-    <div class="title mb-3">
+  <div class="mb-6">
+    <div class="title mb-4">
       {{ options.title }}
     </div>
     <slot v-if="$slots.default" />
@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 .title {
-    border-bottom: 2px #bfbfbf solid;
+  border-bottom: 2px #bfbfbf solid;
   font-weight: 300;
   line-height: 1.5 !important;
   letter-spacing: 0.2em !important;

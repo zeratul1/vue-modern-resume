@@ -5,14 +5,14 @@
   >
     <v-card-text>
       <content-section
-        title="Who am I?"
+        title="自我介绍"
       >
-        I'm a developer born in Iran and founder of <a href="http://delix.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=delix">Delix.ir</a>, <a href="https://bytegate.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=bytegate">Bytegate.ir</a> and <a href="http://bobet.ir/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=bobet">Bobet.ir</a> and co-founder of <a href="https://smo.li/?utm_source=portiflo&utm_medium=link&utm_content=intro&utm_campaign=smoli">Smo.li</a>.<br>
-        I'm interested and skilled in different topics of Information Technology including programming, web development, and computer and network security.
+        我是一名互联网前端开发，擅长 WEB 前端相关的开发技术。<br>
+        我在 WEB 开发领域有丰富的实践经验，对前端技术始终保持热情。
       </content-section>
       <content-section
         v-if="prouds"
-        title="What am I proud of?"
+        title="我的优势"
       >
         <v-layout
           v-for="(proud, i) in prouds"
@@ -39,7 +39,7 @@
       </content-section>
       <content-section
         v-if="educations"
-        title="Education"
+        title="教育经历"
       >
         <v-layout
           v-for="(education, i) in educations"
@@ -62,11 +62,9 @@
       <content-section
         v-if="skills"
         id="to-timeline"
-        title="Skills"
+        ref="to-timeline"
+        title="专业技能"
       >
-        <template slot="actions">
-          (% are relative not absolute)
-        </template>
         <v-layout wrap>
           <template
             v-for="(skill, i) in skills"
@@ -87,7 +85,7 @@
               <div
                 class="mr-2 ml-2"
               >
-                <div class="align-center">
+                <div class="icon-title">
                   <v-icon
                     small
                   >
@@ -118,108 +116,117 @@ export default {
   data      : () => ({
     prouds: [
       {
-        icon  : 'mdi-help-rhombus-outline',
-        text  : 'Answered 10M+ questions!',
-        source: '(Bytegate.ir post views)',
+        icon  : 'mdi-web',
+        text  : 'WEB 技术知识储备广泛，实践经验丰富，能有效应对工程实践中可能出现的各种问题。',
+        source: '',
       },
       {
-        icon  : 'mdi-library-music',
-        text  : 'Made people enjoy and learn a new language for equivalent of 29+ years (older than myself!)',
-        source: '(Bobet.ir and its channel downloads)',
+        icon  : 'mdi-widgets',
+        text  : '熟悉前端模块，前端工程，能在各种规模，不同特性的项目中进行合理集成。',
+        source: '',
       },
       {
-        icon  : 'mdi-timer-sand',
-        text  : 'Saved +110 days of time of students, writers and etc!',
-        source: '(Delix.ir service usages)',
-      },
-      {
-        icon  : 'mdi-account-multiple',
-        text  : 'Tried to cover small part of 7 people expenses.',
-        source: '(My awesome colleagues)',
+        icon  : 'mdi-comment-text',
+        text  : '爱讨论，爱交流，团队成员或者社区用户都是好伙伴。',
+        source: '',
       },
     ],
     educations: [
       {
-        from       : '2015',
-        to         : '2019 (not finished yet)',
-        title      : 'Bachelor\'s degree, Information Technology',
-        location   : 'Seraj University',
-        description: 'Became a member of University Academic Association of Computer Science',
+        from       : '2004',
+        to         : '2008',
+        title      : '本科',
+        location   : '河海大学',
+        description: '设施农业科学与工程',
       },
     ],
     skills: [
       {
-        title: 'PHP',
-        icon : 'mdi-language-php',
-        value: 95,
+        title: 'HTML',
+        icon : 'mdi-language-html5',
+        value: 80,
       },
       {
-        title: 'JavaScript',
+        title: 'CSS',
+        icon : 'mdi-language-css3',
+        value: 80,
+      },
+      {
+        title: 'Javascript',
         icon : 'mdi-language-javascript',
         value: 80,
       },
       {
-        title: 'Laravel Framework',
-        icon : 'mdi-laravel',
-        value: 90,
+        title: 'Typescript',
+        icon : 'mdi-language-typescript',
+        value: 60,
       },
       {
-        title: 'Vue.js Framework',
-        icon : 'mdi-vuejs',
-        value: 90,
+        title: 'Node.js',
+        icon : 'mdi-nodejs',
+        value: 75,
+      },
+      {
+        title: 'NPM',
+        icon : 'mdi-npm',
+        value: 75,
       },
       { divider: true },
       {
-        title: 'Ubuntu Server',
-        icon : 'mdi-ubuntu',
-        value: 70,
-      },
-      {
-        title: 'CentOS Server',
-        icon : 'mdi-linux',
-        value: 47,
-      },
-      {
-        title: 'Web Application Security',
-        icon : 'mdi-shield-lock',
+        title: 'Vue.js Framework',
+        icon : 'mdi-vuejs',
         value: 80,
       },
       {
-        title: 'Test Driven Development',
-        icon : 'mdi-test-tube',
-        value: 26,
+        title: 'React Framework',
+        icon : 'mdi-react',
+        value: 70,
       },
       {
-        title: 'Continuous Integration / Continuous Delivery',
-        icon : 'mdi-truck-fast',
-        value: 35,
+        title: 'Electron Framework',
+        icon : 'mdi-electron-framework',
+        value: 70,
+      },
+      { divider: true },
+      {
+        title: 'Linux',
+        icon : 'mdi-linux',
+        value: 60,
+      },
+      {
+        title: 'Bash',
+        icon : 'mdi-bash',
+        value: 60,
+      },
+      {
+        title: 'Web Protocol',
+        icon : 'mdi-protocol',
+        value: 75,
+      },
+      {
+        title: 'Web Security',
+        icon : 'mdi-security',
+        value: 60,
       },
       {
         title: 'Git',
         icon : 'mdi-git',
-        value: 67,
-      },
-      { divider: true },
-      {
-        title: 'Hardware Development',
-        icon : 'mdi-chip',
-        value: 29,
+        value: 60,
       },
       {
-        title: 'C/C++',
-        icon : 'mdi-language-cpp',
-        value: 38,
-      },
-      { divider: true },
-      {
-        title: 'Leadership',
-        icon : 'mdi-account-group',
-        value: 68,
+        title: 'Regex',
+        icon : 'mdi-regex',
+        value: 70,
       },
       {
-        title: 'Content Marketing (+340 articles)',
-        icon : 'mdi-text',
-        value: 96,
+        title: 'SVG',
+        icon : 'mdi-svg',
+        value: 70,
+      },
+      {
+        title: 'Docker',
+        icon : 'mdi-docker',
+        value: 60,
       },
     ],
   }),
@@ -232,6 +239,14 @@ export default {
   line-height: 1.5 !important;
 }
 .progress {
+  margin-bottom: 0.5rem;
   margin-top: 0.1rem;
+}
+.icon-title {
+  align-items: center;
+  display: flex;
+}
+.icon-title > .v-icon {
+  margin-right: 0.25rem;
 }
 </style>

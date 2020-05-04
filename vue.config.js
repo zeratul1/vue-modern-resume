@@ -1,11 +1,11 @@
 module.exports = {
-  // publicPath      : process.env.NODE_ENV === 'production' ? '/' : '/',
-  css             : { loaderOptions: { css: { url: false } } },
-  configureWebpack: (config) => {
+  css                  : { loaderOptions: { css: { url: false } } },
+  transpileDependencies: ['vuetify'],
+  configureWebpack     : (config) => {
     config.module.rules = [
       ...config.module.rules,
       {
-        test   : require('path').resolve(__dirname, 'node_modules/leader-line/'),
+        test   : require.resolve('leader-line'),
         loader : 'skeleton-loader',
         options: { procedure: (content) => `${content} export default LeaderLine` },
       },

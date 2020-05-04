@@ -31,7 +31,7 @@
 <script>
 export default {
   name: 'GithubRibbon',
-  data: () => ({ url: 'https://github.com/AmirrezaNasiri/vue-modern-resume' }),
+  data: () => ({ url: 'https://github.com/zeratul1/vue-modern-resume' }),
 }
 </script>
 

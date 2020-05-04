@@ -3,10 +3,10 @@
     color="grey lighten-4"
     light
   >
-    <v-card-text class="text-xs-center">
-      <h4>OK ... OK ... My CV has just been finished here but not my journey!</h4>
-      <div>Don't believe me? keep scrolling!</div>
-      <content-section>
+    <v-card-text class="text-sm-center">
+      <h4>好了，工作经历到这儿结束了。但是人生还没有！</h4>
+      <div>不信试试看，继续向下滚！</div>
+      <content-section class="mt-2">
         <v-timeline>
           <v-timeline-item
             v-for="n in futurePage * 2"
@@ -73,57 +73,57 @@ export default {
     loading      : false,
     messages     : [
       {
-        text: 'Ok, here is my future!',
+        text: '你对力量一无所知！',
         from: 1,
         to  : 1,
       },
       {
-        text: 'And even more ... :)',
+        text: '还要更多... :)',
         from: 2,
         to  : 2,
       },
       {
-        text: 'Still curious?',
+        text: '仍然很好奇？',
         from: 3,
         to  : 3,
       },
       {
-        text: 'We all should be curious about it, shouldn\'t we?',
+        text: '好奇害死猫，对吧?',
         from: 4,
         to  : 4,
       },
       {
-        text: 'With a plan and persistence ...',
+        text: '坚持到底...',
         from: 5,
         to  : 5,
       },
       {
-        text: 'We can do anything!',
+        text: '一切皆有可能！',
         from: 6,
         to  : 6,
       },
       {
-        text: 'There is a good news:',
+        text: '好消息是：',
         from: 7,
         to  : 7,
       },
       {
-        text: 'Even you can do it!',
+        text: '努力才能成功！',
         from: 8,
         to  : 8,
       },
       {
-        text: 'Of course with a lot of hardship ... a LOT OF them! ...',
+        text: '全力以赴...',
         from: 9,
         to  : 9,
       },
       {
-        text: 'But we\'re still alive, aren\'t we?',
+        text: '你还没有准备好？',
         from: 10,
         to  : 10,
       },
       {
-        text: 'So we WILL do it. There is no option! These are things should be done, without any excuses!\nAnd HEY! There is no RESET button for your life.\nStop scrolling now and go do whatever you must 👌',
+        text: '您啥都不知道呐，囧雪诺。\n到此为止，别往下滚了，快去创造奇迹 👌',
         from: 11,
         to  : null,
       },

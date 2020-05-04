@@ -5,12 +5,12 @@
   >
     <v-card-text>
       <avatar />
-      <div class="text-sm-center mb-4 mt-3">
-        <h1>
-          Amirreza <span class="light-blue--text text--lighten-3">Nasiri</span>
+      <div class="text-sm-center mb-6 mt-4">
+        <h1 class="display-name">
+          张扬 <span class="light-blue--text text--lighten-3">Yang</span>
         </h1>
         <span>
-          A challenge-loving web developer
+          做互联网开发的诚信肥宅
         </span>
       </div>
 
@@ -18,7 +18,7 @@
       <sidebar-section :options="sections.socials" />
       <sidebar-section :options="sections.hobbies">
         <template v-slot:item="{item}">
-          <v-chip>
+          <v-chip class="ma-1 hobby-item">
             <v-avatar>
               <v-icon>
                 {{ item.icon }}
@@ -74,123 +74,103 @@ export default {
     return {
       sections: {
         info: {
-          title: 'INFO',
+          title: '基本信息',
           items: [
             {
-              name: 'Email',
+              name: '邮箱',
               icon: 'mdi-email',
-              text: 'hi@amirreza.in',
+              text: 'zeratul1986@hotmail.com',
             },
             {
-              name: 'Website',
-              icon: 'mdi-web',
-              text: 'amirreza.in',
-            },
-            {
-              name: 'Birth Date',
+              name: '出生日期',
               icon: 'mdi-cake-variant',
-              text: 'Dec 7, 1996',
+              text: '1986-12-22',
             },
             {
-              name: 'Habitation',
+              name: '居住地',
               icon: 'mdi-map-marker',
-              text: 'Tabriz, Iran',
+              text: '江苏，南京',
             },
           ],
         },
         socials: {
-          title: 'SOCIALS',
+          title: '社交账号',
           items: [
             {
-              icon: 'mdi-github-circle',
-              text: 'github.com/AmirrezaNasiri',
-              link: 'https://github.com/AmirrezaNasiri',
+              icon: 'mdi-wechat',
+              text: 'zeratul1986',
+              link: '',
             },
             {
-              icon: 'mdi-linkedin-box',
-              text: 'linkedin.com/in/amirreza-nasiri',
-              link: 'https://linkedin.com/in/amirreza-nasiri',
-            },
-            {
-              icon: 'mdi-twitter',
-              text: 'twitter.com/Amirreza_Nasiri',
-              link: 'https://twitter.com/Amirreza_Nasiri',
-            },
-            {
-              icon: 'mdi-instagram',
-              text: 'instagram.com/amirreza.n96',
-              link: 'https://instagram.com/amirreza.n96',
+              icon: 'mdi-github',
+              text: 'github.com/zeratul1',
+              link: 'https://github.com/zeratul1',
             },
           ],
         },
         hobbies: {
-          title: 'HOBBIES',
+          title: '兴趣爱好',
           items: [
-
-            {
-              icon: 'mdi-bullseye',
-              text: 'Getting out of Safe Zone',
-            },
-            {
-              icon: 'mdi-biohazard',
-              text: 'Challenges',
-            },
-            {
-              icon: 'mdi-bike',
-              text: 'Cycling',
-            },
-            {
-              icon: 'mdi-image-filter-hdr',
-              text: 'Nature',
-            },
-            {
-              icon: 'mdi-auto-fix',
-              text: 'Hacking Stuffs',
-            },
             {
               icon: 'mdi-teach',
-              text: 'Teaching',
-            },
-            {
-              icon: 'mdi-karate',
-              text: 'Sports',
-            },
-            {
-              icon: 'mdi-music',
-              text: 'Music',
-            },
-            {
-              icon: 'mdi-account-group',
-              text: 'Leadership',
-            },
-            {
-              icon: 'mdi-book-open-page-variant',
-              text: 'Books',
+              text: '爱讨论',
             },
             {
               icon: 'mdi-android-debug-bridge',
-              text: 'Tickling Bugs!',
+              text: '调代码',
+            },
+            {
+              icon: 'mdi-movie',
+              text: '看电影',
+            },
+            {
+              icon: 'mdi-book-open',
+              text: '阅读',
+            },
+            {
+              icon: 'mdi-puzzle',
+              text: '拼图',
+            },
+            {
+              icon: 'mdi-nas',
+              text: '仓鼠症',
+            },
+            {
+              icon: 'mdi-beer',
+              text: '快乐水',
+            },
+            {
+              icon: 'mdi-baby-bottle',
+              text: '奶娃',
+            },
+            {
+              icon: 'mdi-camera',
+              text: '摄影',
+            },
+            {
+              icon: 'mdi-grill',
+              text: '露营',
+            },
+            {
+              icon: 'mdi-badminton',
+              text: '羽毛球',
+            },
+            {
+              icon: 'mdi-nintendo-switch',
+              text: '任地狱',
             },
           ],
         },
         languages: {
-          title: 'LANGUAGES',
+          title: '语言',
           items: [
             {
-              text : 'English',
+              text : '汉语',
+              value: 100,
+            },
+            {
+              text : '英语',
               value: 70,
-            },
-            {
-              text : 'Turkish',
-              value: 45,
-            },
-            {
-              text : 'Azeri',
-              value: 100,
-            },
-            {
-              text : 'Persian',
-              value: 100,
             },
           ],
         },
@@ -203,5 +183,15 @@ export default {
 <style scoped>
 .sidebar{
     background: #2e2e2e;
+}
+.display-name {
+  line-height: 1.5;
+}
+.hobby-item {
+  font-size: 13px;
+}
+.hobby-item .v-avatar {
+  margin-left: -4px;
+  margin-right: 4px;
 }
 </style>
